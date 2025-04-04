@@ -22,6 +22,7 @@ extern "C" {
 	__declspec(dllexport) long GetSenderFrameWrapper();
 	__declspec(dllexport) const char* GetSenderNameWrapper();
 	__declspec(dllexport) bool ReceiveImageWrapper(unsigned char* pixels, unsigned int format, bool bInvert, unsigned int hostFbo);
+	__declspec(dllexport) bool ReceiveTextureWrapper(unsigned int TextureID, unsigned int TextureTarget, bool bInvert, unsigned int HostFbo);
 
 #ifdef __cplusplus
 }

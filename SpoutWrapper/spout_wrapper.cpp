@@ -73,6 +73,10 @@ __declspec(dllexport) bool ReceiveImageWrapper(unsigned char* pixels, unsigned i
     return (spout) && spout->ReceiveImage(pixels, format, bInvert, hostFbo);
 }
 
+__declspec(dllexport) bool ReceiveTextureWrapper(unsigned int TextureID, unsigned int TextureTarget, bool bInvert, unsigned int HostFbo) {
+    return (spout) && spout->ReceiveTexture(TextureID, TextureTarget, bInvert, HostFbo);
+}
+
 // Ensure Spout DLL is unloaded when the DLL is unloaded
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {
     switch (fdwReason) {
