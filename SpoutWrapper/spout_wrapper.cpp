@@ -33,6 +33,10 @@ __declspec(dllexport) bool SendFboWrapper(unsigned int FboID, unsigned int width
     return (spout) && spout->SendFbo(FboID, width, height, bInvert);
 }
 
+__declspec(dllexport) bool SendTextureWrapper(unsigned int TextureID, unsigned int TextureTarget, unsigned int width, unsigned int height, bool bInvert, unsigned int HostFBO) {
+    return (spout) && spout->SendTexture(TextureID, TextureTarget, width, height, bInvert, HostFBO);
+}
+
 __declspec(dllexport) void SetReceiverNameWrapper(const char* receiverName) {
     if (spout) spout->SetReceiverName(receiverName);
 }

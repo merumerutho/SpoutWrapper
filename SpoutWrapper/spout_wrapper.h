@@ -11,6 +11,7 @@ extern "C" {
 
 	__declspec(dllexport) void SetSenderNameWrapper(const char* senderName);
 	__declspec(dllexport) bool SendImageWrapper(const unsigned char* pixels, unsigned int width, unsigned int height, unsigned int format, bool bInvert);
+	__declspec(dllexport) bool SendTextureWrapper(unsigned int TextureID, unsigned int TextureTarget, unsigned int width, unsigned int height, bool bInvert, unsigned int HostFBO);
 	__declspec(dllexport) bool SendFboWrapper(unsigned int FboID, unsigned int width, unsigned int height, bool bInvert);
 	__declspec(dllexport) void SetReceiverNameWrapper(const char* receiverName);
 	__declspec(dllexport) bool IsConnectedWrapper();
